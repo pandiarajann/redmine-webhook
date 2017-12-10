@@ -5,6 +5,7 @@ A [Redmine](http://www.redmine.org) plugin that posts data to a configured webho
 ## Author
 * @suer (original author)
 * @phanan (rewriting and adding some features)
+* @pandiarajann (Added trigger features when an issue us closed)
 
 ## Install
 Type below commands:
@@ -202,9 +203,6 @@ Triggers a jenkins build job when an issue is closed using the specified URL wit
 
 ### Build with parameters
 http://<(hostname)>:<(port)>/job/<(jobname)>/buildWithParameters?token=<(token)>
-
-### Build without parameters
-http://<(hostname)>:<(port)>/job/<(jobname)>/build?token=<(token)>
 
 Note:
 The parameters are programatically appended to the URL.
