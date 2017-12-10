@@ -201,10 +201,10 @@ Then, restart your Redmine.
 Triggers a jenkins build job when an issue is closed using the specified URL with the token and parameters. The keyword is "closed" while closing the issue.
 
 ### Build with parameters
-http://<hostname>:<port>/job/<jobname>/buildWithParameters?token=<token>
+http://<(hostname)>:<(port)>/job/<(jobname)>/buildWithParameters?token=<(token)>
 
 ### Build without parameters
-http://<hostname>:<port>/job/<jobname>/build?token=<token>
+http://<(hostname)>:<(port)>/job/<(jobname)>/build?token=<(token)>
 
 Note:
 The parameters are programatically appended to the URL.
