@@ -192,14 +192,32 @@ Then, restart your Redmine.
         }
       ]
     },
-    "journal_html": [
-      "<strong>Status<\/strong> changed from <i>New<\/i> to <i>Resolved<\/i>",
-      "<strong>Priority<\/strong> changed from <i>Normal<\/i> to <i>High<\/i>"
-    ],
     "url": "http:\/\/localhost:3000\/issues\/1#change-28"
   }
 }
 ```
+## Trigger Examples
+
+Triggers a jenkins build job when an issue is closed using the specified URL with the token and parameters. The keyword is "closed" while closing the issue.
+
+### Build with parameters
+http://<hostname>:<port>/job/<jobname>/buildWithParameters?token=<token>
+
+### Build without parameters
+http://<hostname>:<port>/job/<jobname>/build?token=<token>
+
+Note:
+The parameters are programatically appended to the URL.
+
+List of parameters appended:
+* project_name
+* subject
+* status
+* tracker
+* priority
+* created_on
+* closed_on
+* (All the custom field values in sequence). Use the exact keywork of the customfield name as specified in the redmine.
 
 ## Requirements
 * Redmine >= 2.4 (not tested with 3.x)
